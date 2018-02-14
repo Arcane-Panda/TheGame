@@ -1,21 +1,20 @@
 #ifndef ITEM_HPP
 #define ITEM_HPP
 
-class Item {
-	private:
-		std::string name;
-		unsigned hpBonus;
-		unsigned damageBonus;
-		unsigned id;
+class Item : public Object {
 	public:
-		Item(std::string _name, unsigned _hpBonus, unsigned _damageBonus, unsigned _id)
-		: name(_name), hpBonus(_hpBonus), damageBonus(_damageBonus), id(_id)
-		{}
+		unsigned healthBonus;
+		unsigned damageBonus;
+		
+		void setHealthBonus(unsigned _healthBonus) {
+			healthBonus = _healthBonus;
+		}
 
-		unsigned hpBonusValue() {return hpBonus;}
-		unsigned damageBonusValue() {return damageBonus;}
+		void setDamageBonus(unsigned _damageBonus) {
+			damageBonus = _damageBonus;
+		}
 
-		bool operator==(const Item &item) {return item.id == id;}
+		bool operator==(const Item &i) {return i.id == id;}
 };
 
 #endif
