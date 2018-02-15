@@ -13,39 +13,39 @@ class Creature
 			healthMax = _healthMax;
 		}
 
-		int getHealthLevel() {
+		int Creature::getHealthLevel() {
 			return healthLevel;
 		}
 
-		unsigned getHealthMax() {
+		unsigned Creature::getHealthMax() {
 			return healthMax;
 		}
 
-		void setDamage(unsigned _damage) {
+		void Creature::setDamage(unsigned _damage) {
 			damage = _damage;
 		}
 
-		unsigned getDamage() {
+		unsigned Creature::getDamage() {
 			return damage;
 		}
 
-		void attack(Creature& victim) {
+		void Creature::attack(Creature& victim) {
 			victim.healthLevel -= damage;
 		}
 
-		void enrage(float healthBuff, float damageBuff) {
+		void Creature::enrage(float healthBuff, float damageBuff) {
 			healthLevel *= healthBuff;
 			healthMax *= healthBuff;
 			damage *= damageBuff;
 		}
 
-		void equip(Item newItem) {
+		void Creature::equip(Item newItem) {
 			inventory.push_back(newItem);
 			healthMax += newItem.getHealthBonus();
 			damage += newItem.getDamageBonus();
 		}
 
-		void unequip(Item newItem) {
+		void Creature::unequip(Item newItem) {
 			inventory.erase(remove(inventory.begin(), inventory.end(), newItem), inventory.end());
 			healthMax -= newItem.getHealthBonus();
 			damage -= newItem.getDamageBonus();
