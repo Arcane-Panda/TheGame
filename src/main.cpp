@@ -2,8 +2,8 @@
 #include <string>
 #include <vector>
 #include <algorithm>
-#include <string>;
-#include <vector>;
+#include <string>
+#include <vector>
 
 #include "headers/Object.hpp"
 #include "headers/Item.hpp"
