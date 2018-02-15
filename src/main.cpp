@@ -2,9 +2,9 @@
 #include <string>
 #include <vector>
 #include <algorithm>
-
-using std::string;
-using std::vector;
+using namespace std;
+using string;
+using vector;
 
 #include "headers/Object.hpp"
 #include "headers/Item.hpp"
