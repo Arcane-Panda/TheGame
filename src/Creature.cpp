@@ -1,4 +1,5 @@
 #include <iostream>
+#include "Creature.hpp"
 
 using namespace std;
 
