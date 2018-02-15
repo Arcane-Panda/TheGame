@@ -2,22 +2,28 @@
 #define OBJECT_HPP
 
 class Object {
-	public:
+	protected:
 		string name;
 		unsigned id;
-		int x, y;
+	public:
+		Object(string _name, unsigned _id)
+		: name(_name), id(_id)
+		{}
 
 		void setName(string _name) {
 			name = _name;
+		}
+
+		string getName() {
+			return name;
 		}
 
 		void setId(unsigned _id) {
 			id = _id;
 		}
 
-		void setPosition(int _x, int _y) {
-			x = _x;
-			y = _y;
+		unsigned getId() {
+			return id;
 		}
 };
 
